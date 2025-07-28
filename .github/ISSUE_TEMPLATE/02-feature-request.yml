@@ -1,0 +1,188 @@
+name: ✨ Feature Request / 功能请求
+description: Suggest a new feature or enhancement for AgentifUI / 为AgentifUI建议新功能或改进
+title: "[FEATURE] "
+labels: ["enhancement", "needs-discussion"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for suggesting a new feature! We appreciate your input to help make AgentifUI better.
+        
+        感谢您建议新功能！我们感谢您的意见，帮助使AgentifUI更好。
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites / 前提条件
+      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      options:
+        - label: I have searched the existing issues and feature requests / 我已搜索现有问题和功能请求
+          required: true
+        - label: I have checked the project roadmap / 我已查看项目路线图
+          required: true
+        - label: This feature aligns with the project's goals / 此功能符合项目目标
+          required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Feature Title / 功能标题
+      description: A clear and concise title for the proposed feature / 建议功能的清晰简洁标题
+      placeholder: "e.g., Add voice message support in chat / 在聊天中添加语音消息支持"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement / 问题陈述
+      description: What problem does this feature solve? / 此功能解决什么问题？
+      placeholder: |
+        Describe the problem or limitation you're facing that this feature would address.
+        描述您面临的问题或限制，此功能将解决这些问题。
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / 建议解决方案
+      description: Describe your proposed solution in detail / 详细描述您的建议解决方案
+      placeholder: |
+        **What should the feature do? / 功能应该做什么？**
+        Describe the functionality and behavior.
+
+        **How should it work? / 它应该如何工作？**
+        Describe the user interaction and workflow.
+
+        **What should it look like? / 它应该是什么样子？**
+        Describe the UI/UX if applicable.
+      value: |
+        **What should the feature do? / 功能应该做什么？**
+        
+
+        **How should it work? / 它应该如何工作？**
+        
+
+        **What should it look like? / 它应该是什么样子？**
+        
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Feature Category / 功能类别
+      description: Which area does this feature belong to? / 此功能属于哪个领域？
+      options:
+        - Chat Experience / 聊天体验
+        - Admin & Management / 管理和管理
+        - Authentication & Security / 身份验证和安全
+        - API & Integration / API和集成
+        - UI/UX Improvements / UI/UX改进
+        - Performance / 性能
+        - Accessibility / 可访问性
+        - Internationalization / 国际化
+        - Mobile Experience / 移动体验
+        - Developer Experience / 开发者体验
+        - Documentation / 文档
+        - Other / 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority / 优先级
+      description: How important is this feature to you? / 此功能对您有多重要？
+      options:
+        - Critical - Blocking my use of the product / 严重 - 阻止我使用产品
+        - High - Would significantly improve my experience / 高 - 将显著改善我的体验
+        - Medium - Would be nice to have / 中等 - 有会很好
+        - Low - Minor improvement / 低 - 小改进
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative Solutions / 替代解决方案
+      description: Have you considered any alternative solutions or workarounds? / 您考虑过任何替代解决方案或变通方法吗？
+      placeholder: |
+        Describe any alternative solutions you've considered or current workarounds you're using.
+        描述您考虑过的任何替代解决方案或您正在使用的当前变通方法。
+
+  - type: textarea
+    id: user_stories
+    attributes:
+      label: User Stories / 用户故事
+      description: Provide user stories to illustrate how this feature would be used / 提供用户故事来说明如何使用此功能
+      placeholder: |
+        As a [type of user], I want [feature] so that [benefit].
+        作为[用户类型]，我希望[功能]以便[好处]。
+
+        Example:
+        As a chat administrator, I want to set custom message limits so that I can better manage system resources.
+      value: |
+        As a [type of user], I want [feature] so that [benefit].
+        
+
+  - type: checkboxes
+    id: implementation
+    attributes:
+      label: Implementation Considerations / 实施注意事项
+      description: Please check all that apply / 请勾选所有适用项
+      options:
+        - label: This feature requires frontend changes / 此功能需要前端更改
+        - label: This feature requires backend changes / 此功能需要后端更改
+        - label: This feature requires database changes / 此功能需要数据库更改
+        - label: This feature requires API changes / 此功能需要API更改
+        - label: This feature affects mobile experience / 此功能影响移动体验
+        - label: This feature affects internationalization / 此功能影响国际化
+        - label: This feature requires documentation updates / 此功能需要文档更新
+
+  - type: textarea
+    id: mockups
+    attributes:
+      label: Mockups / Screenshots / 模型图/截图
+      description: |
+        Attach any mockups, sketches, or reference images that help illustrate your idea.
+        附加任何模型图、草图或参考图像来帮助说明您的想法。
+      placeholder: |
+        You can attach images by clicking this area to highlight it and then dragging files in.
+        您可以通过点击此区域突出显示，然后拖入文件来附加图像。
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: Timeline / 时间线
+      description: When would you like to see this feature implemented? / 您希望何时看到此功能实施？
+      options:
+        - Immediate - Needed urgently / 立即 - 急需
+        - Next release - Within 1-2 months / 下个版本 - 1-2个月内
+        - Future release - Within 3-6 months / 未来版本 - 3-6个月内
+        - Whenever possible - No rush / 有可能的时候 - 不急
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Contribution / 贡献
+      description: Are you willing to contribute to this feature? / 您愿意为此功能做出贡献吗？
+      options:
+        - label: I can help with design/mockups / 我可以帮助设计/模型图
+        - label: I can help with frontend development / 我可以帮助前端开发
+        - label: I can help with backend development / 我可以帮助后端开发
+        - label: I can help with testing / 我可以帮助测试
+        - label: I can help with documentation / 我可以帮助文档
+        - label: I can provide feedback during development / 我可以在开发期间提供反馈
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct / 行为准则
+      description: By submitting this feature request, you agree to follow our Code of Conduct / 通过提交此功能请求，您同意遵守我们的行为准则
+      options:
+        - label: I agree to follow this project's Code of Conduct / 我同意遵守此项目的行为准则
+          required: true 

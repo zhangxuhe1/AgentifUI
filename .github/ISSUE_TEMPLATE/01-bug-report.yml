@@ -1,0 +1,164 @@
+name: 🐛 Bug Report / 错误报告
+description: Report a bug to help us improve AgentifUI / 报告错误帮助我们改进AgentifUI
+title: "[BUG] "
+labels: ["bug", "needs-triage"]
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for taking the time to report this bug! Your feedback helps make AgentifUI better for everyone.
+        
+        感谢您花时间报告此错误！您的反馈有助于让AgentifUI对每个人都更好。
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Prerequisites / 前提条件
+      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      options:
+        - label: I have searched the existing issues / 我已搜索现有问题
+          required: true
+        - label: I have read the documentation / 我已阅读相关文档
+          required: true
+        - label: I am using the latest version / 我使用的是最新版本
+          required: false
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary / 错误摘要
+      description: A clear and concise description of the bug / 对错误的清晰简洁描述
+      placeholder: "e.g., Chat interface crashes when uploading large files / 聊天界面在上传大文件时崩溃"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Detailed Description / 详细描述
+      description: Provide a detailed description of what happened / 提供所发生情况的详细描述
+      placeholder: |
+        **What happened? / 发生了什么？**
+        Describe the bug in detail.
+
+        **What did you expect to happen? / 您期望发生什么？**
+        Describe what you expected to see.
+      value: |
+        **What happened? / 发生了什么？**
+        
+
+        **What did you expect to happen? / 您期望发生什么？**
+        
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce / 重现步骤
+      description: Please provide step-by-step instructions to reproduce the issue / 请提供重现问题的分步说明
+      placeholder: |
+        1. Go to '...' / 转到'...'
+        2. Click on '...' / 点击'...'
+        3. Scroll down to '...' / 向下滚动到'...'
+        4. See error / 看到错误
+      value: |
+        1. 
+        2. 
+        3. 
+        4. 
+    validations:
+      required: true
+
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component / 组件
+      description: Which component is affected? / 哪个组件受到影响？
+      options:
+        - Chat Interface / 聊天界面
+        - Admin Dashboard / 管理面板
+        - Authentication / 身份验证
+        - File Upload / 文件上传
+        - API Integration / API集成
+        - Database / 数据库
+        - UI Components / UI组件
+        - Internationalization / 国际化
+        - Mobile Interface / 移动界面
+        - Other / 其他
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser / 浏览器
+      description: Which browser(s) are you experiencing this issue with? / 您在哪个浏览器中遇到此问题？
+      multiple: true
+      options:
+        - Chrome
+        - Firefox
+        - Safari
+        - Edge
+        - Mobile Safari (iOS)
+        - Mobile Chrome (Android)
+        - Other
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment / 环境
+      description: Please provide environment details / 请提供环境详细信息
+      placeholder: "OS: macOS 14.0, Browser: Chrome 120, Node.js: 18.19.0, Next.js: 15.0"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Console Logs / 控制台日志
+      description: Please paste any relevant console logs, error messages, or stack traces / 请粘贴任何相关的控制台日志、错误消息或堆栈跟踪
+      placeholder: Paste console output here...
+      render: shell
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context / 其他信息
+      description: |
+        Add any other context about the problem here, such as:
+        - Screenshots or videos
+        - Related issues
+        - Workarounds you've tried
+        
+        在此添加有关问题的任何其他上下文，例如：
+        - 截图或视频
+        - 相关问题
+        - 您尝试过的解决方法
+      placeholder: |
+        You can attach images or log files by clicking this area to highlight it and then dragging files in.
+        您可以通过点击此区域突出显示，然后拖入文件来附加图像或日志文件。
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity / 严重程度
+      description: How severe is this bug? / 此错误有多严重？
+      options:
+        - Critical - App is unusable / 严重 - 应用无法使用
+        - High - Major functionality broken / 高 - 主要功能损坏
+        - Medium - Minor functionality issues / 中等 - 次要功能问题
+        - Low - Cosmetic issues / 低 - 外观问题
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct / 行为准则
+      description: By submitting this issue, you agree to follow our Code of Conduct / 通过提交此问题，您同意遵守我们的行为准则
+      options:
+        - label: I agree to follow this project's Code of Conduct / 我同意遵守此项目的行为准则
+          required: true 
