@@ -1,6 +1,5 @@
 name: ❓ Question / Support / 问题/支持
 description: Ask a question or get help with using AgentifUI / 询问问题或获取使用AgentifUI的帮助
-title: "[QUESTION] "
 
 body:
   - type: markdown

@@ -1,6 +1,5 @@
 name: 📚 Documentation / 文档
 description: Report issues with documentation or suggest improvements / 报告文档问题或建议改进
-title: "[DOCS] "
 
 body:
   - type: markdown
