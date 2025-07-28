@@ -32,11 +32,7 @@ body:
         - Incorrect information / 错误信息
         - Unclear instructions / 不清楚的说明
         - Outdated content / 过时内容
-        - Translation issue / 翻译问题
         - Formatting issue / 格式问题
-        - New documentation needed / 需要新文档
-        - API documentation / API文档
-        - Setup guide / 设置指南
         - Other / 其他
     validations:
       required: true
@@ -86,8 +82,6 @@ body:
         - Developers / 开发者
         - Administrators / 管理员
         - Contributors / 贡献者
-        - New users / 新用户
-        - Advanced users / 高级用户
     validations:
       required: true
 
