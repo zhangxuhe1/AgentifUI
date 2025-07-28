@@ -41,7 +41,6 @@ body:
       description: What type of question do you have? / 您有什么类型的问题？
       options:
         - Installation & Setup / 安装和设置
-        - Configuration / 配置
         - Dify API Integration / Dify API集成
         - Authentication / 身份验证
         - Database Setup / 数据库设置
@@ -79,24 +78,6 @@ body:
         
     validations:
       required: true
-
-  - type: textarea
-    id: environment
-    attributes:
-      label: Environment Information / 环境信息
-      description: Provide context about your setup / 提供有关您的设置的信息
-      placeholder: |
-        - AgentifUI version: (e.g., 0.1.0, main branch)
-        - Operating System: (e.g., macOS 14.0, Windows 11)
-        - Node.js version: (e.g., 22.15.0)
-        - Database: (e.g., Supabase hosted, local)
-        - Deployment method: (e.g., local dev, PM2, Docker)
-      value: |
-        - AgentifUI version: 
-        - Operating System: 
-        - Node.js version: 
-        - Database: 
-        - Deployment method: 
 
   - type: textarea
     id: logs_or_code
