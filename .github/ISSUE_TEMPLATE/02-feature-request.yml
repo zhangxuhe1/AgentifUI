@@ -1,77 +1,70 @@
-name: ✨ Feature Request / 功能请求
-description: Suggest a new feature or enhancement for AgentifUI / 为AgentifUI建议新功能或改进
+name: ✨ Feature Request
+description: Suggest a new feature or enhancement for AgentifUI
 
 body:
   - type: markdown
     attributes:
       value: |
         Thank you for suggesting a new feature! We appreciate your input to help make AgentifUI better.
-        
-        感谢您建议新功能！我们感谢您的意见，帮助使AgentifUI更好。
 
   - type: checkboxes
     id: prerequisites
     attributes:
-      label: Self Checks / 自检清单
-      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      label: Self Checks
+      description: Please confirm you have completed the following steps
       options:
-        - label: I have searched for existing issues and feature requests / 我已搜索现有问题和功能请求
+        - label: I have searched for existing issues and feature requests
           required: true
-        - label: I confirm that I am using English to submit this report / 我确认使用英文提交此报告
+        - label: I confirm that I am using English to submit this report
           required: true
-        - label: Please do not modify this template and fill in all the required fields / 请不要修改此模板并填写所有必填字段
+        - label: Please do not modify this template and fill in all the required fields
           required: true
 
   - type: input
     id: title
     attributes:
-      label: Feature Summary / 功能摘要
-      description: A clear and concise title for the proposed feature / 建议功能的清晰简洁标题
-      placeholder: "e.g., Add voice message support in chat / 在聊天中添加语音消息支持"
+      label: Feature Summary
+      description: A clear and concise title for the proposed feature
+      placeholder: "e.g., Add voice message support in chat"
     validations:
       required: true
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem Statement / 问题陈述
-      description: What problem does this feature solve? / 此功能解决什么问题？
+      label: Problem Statement
+      description: What problem does this feature solve?
       placeholder: |
         Describe the problem or limitation you're facing that this feature would address.
-        描述您面临的问题或限制，此功能将解决这些问题。
     validations:
       required: true
 
   - type: textarea
     id: solution
     attributes:
-      label: Proposed Solution / 建议解决方案
-      description: Describe your proposed solution in detail / 详细描述您的建议解决方案
+      label: Proposed Solution
+      description: Describe your proposed solution in detail
       placeholder: |
         Describe how it should work and what it should look like.
-        请说明该功能如何工作以及它应呈现的样子。
-        
     validations:
       required: true
 
   - type: textarea
     id: additional_context
     attributes:
-      label: Additional Context / 其他信息
+      label: Additional Context
       description: |
         Attach any mockups, sketches, or reference images that help illustrate your idea.
-        附加任何模型图、草图或参考图像来帮助说明您的想法。
       placeholder: |
         Add any other context about the problem here...
-        在此添加有关问题的任何其他上下文...
 
   - type: checkboxes
     id: contribution
     attributes:
-      label: Contribution / 贡献
-      description: Are you willing to contribute to this feature? / 您愿意为此功能做出贡献吗？
+      label: Contribution
+      description: Are you willing to contribute to this feature?
       options:
-        - label: I can help with design/mockups / 我可以帮助设计/模型图
-        - label: I can help with frontend development / 我可以帮助前端开发
-        - label: I can help with testing / 我可以帮助测试
-        - label: I can provide feedback during development / 我可以在开发期间提供反馈 
+        - label: I can help with design/mockups
+        - label: I can help with frontend development
+        - label: I can help with testing
+        - label: I can provide feedback during development 

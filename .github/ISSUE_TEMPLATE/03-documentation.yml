@@ -1,47 +1,45 @@
-name: 📚 Documentation / 文档
-description: Report issues with documentation or suggest improvements / 报告文档问题或建议改进
+name: 📚 Documentation
+description: Report issues with documentation or suggest improvements
 
 body:
   - type: markdown
     attributes:
       value: |
         Thank you for helping improve our documentation! Clear documentation is essential for project success.
-        
-        感谢您帮助改进我们的文档！清晰的文档对项目成功至关重要。
 
   - type: checkboxes
     id: prerequisites
     attributes:
-      label: Self Checks / 自检清单
-      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      label: Self Checks
+      description: Please confirm you have completed the following steps
       options:
-        - label: I have searched for existing issues / 我已搜索现有问题
+        - label: I have searched for existing issues
           required: true
-        - label: I confirm that I am using English to submit this report / 我确认使用英文提交此报告
+        - label: I confirm that I am using English to submit this report
           required: true
-        - label: Please do not modify this template and fill in all the required fields / 请不要修改此模板并填写所有必填字段
+        - label: Please do not modify this template and fill in all the required fields
           required: true
 
   - type: dropdown
     id: type
     attributes:
-      label: Documentation Type / 文档类型
-      description: What type of documentation issue is this? / 这是什么类型的文档问题？
+      label: Documentation Type
+      description: What type of documentation issue is this?
       options:
-        - Missing documentation / 缺少文档
-        - Incorrect information / 错误信息
-        - Unclear instructions / 不清楚的说明
-        - Outdated content / 过时内容
-        - Formatting issue / 格式问题
-        - Other / 其他
+        - Missing documentation
+        - Incorrect information
+        - Unclear instructions
+        - Outdated content
+        - Formatting issue
+        - Other
     validations:
       required: true
 
   - type: input
     id: location
     attributes:
-      label: Documentation Location / 文档位置
-      description: Where is the documentation located? / 文档位于哪里？
+      label: Documentation Location
+      description: Where is the documentation located?
       placeholder: "e.g., README.md, docs/SETUP-REQUIREMENTS.md, specific section, etc."
     validations:
       required: true
@@ -49,53 +47,49 @@ body:
   - type: textarea
     id: issue
     attributes:
-      label: Issue Description / 问题描述
-      description: Describe the documentation issue or improvement needed / 描述需要的文档问题或改进
+      label: Issue Description
+      description: Describe the documentation issue or improvement needed
       placeholder: |
         What does the document currently say and what are the issues?
-        该文件目前说了什么？存在哪些问题？
-        
     validations:
       required: true
 
   - type: textarea
     id: proposed_content
     attributes:
-      label: Proposed Content / 建议内容
-      description: If you have specific content suggestions, please provide them / 如果您有具体的内容建议，请提供
+      label: Proposed Content
+      description: If you have specific content suggestions, please provide them
       placeholder: |
         Provide the proposed text, code examples, or structure improvements.
-        提供建议的文本、代码示例或结构改进。
 
   - type: dropdown
     id: audience
     attributes:
-      label: Target Audience / 目标受众
-      description: Who is the primary audience for this documentation? / 此文档的主要受众是谁？
+      label: Target Audience
+      description: Who is the primary audience for this documentation?
       options:
-        - End users / 最终用户
-        - Developers / 开发者
-        - Administrators / 管理员
-        - Contributors / 贡献者
+        - End users
+        - Developers
+        - Administrators
+        - Contributors
     validations:
       required: true
 
   - type: textarea
     id: additional_context
     attributes:
-      label: Additional Context / 其他信息
-      description: Any additional context that would help improve the documentation / 任何有助于改进文档的其他信息
+      label: Additional Context
+      description: Any additional context that would help improve the documentation
       placeholder: |
         An explanation of why the change is useful or links to similar documentation in other projects...
-        对更改为何有用的解释或其他项目中类似文档的链接...
 
   - type: checkboxes
     id: contribution
     attributes:
-      label: Contribution / 贡献
-      description: Are you willing to help improve this documentation? / 您愿意帮助改进此文档吗？
+      label: Contribution
+      description: Are you willing to help improve this documentation?
       options:
-        - label: I can write the content / 我可以写内容
-        - label: I can review the content / 我可以审查内容
-        - label: I can provide technical review / 我可以提供技术审查
-        - label: I can test the instructions / 我可以测试说明 
+        - label: I can write the content
+        - label: I can review the content
+        - label: I can provide technical review
+        - label: I can test the instructions 
