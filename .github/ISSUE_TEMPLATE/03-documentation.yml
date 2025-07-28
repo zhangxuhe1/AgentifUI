@@ -52,13 +52,8 @@ body:
       label: Issue Description / 问题描述
       description: Describe the documentation issue or improvement needed / 描述需要的文档问题或改进
       placeholder: |
-        **What's wrong with the current documentation? / 当前文档有什么问题？**
-        
-
-        **What needs to be added or changed? / 需要添加或更改什么？**
-        
-
-        **Why is this important? / 为什么这很重要？**
+        What does the document currently say and what are the issues?
+        该文件目前说了什么？存在哪些问题？
         
     validations:
       required: true
@@ -91,10 +86,8 @@ body:
       label: Additional Context / 其他信息
       description: Any additional context that would help improve the documentation / 任何有助于改进文档的其他信息
       placeholder: |
-        - Related issues or discussions
-        - Screenshots of confusing sections
-        - User feedback or questions you've received
-        - Links to similar documentation in other projects
+        An explanation of why the change is useful or links to similar documentation in other projects...
+        对更改为何有用的解释或其他项目中类似文档的链接...
 
   - type: checkboxes
     id: contribution
