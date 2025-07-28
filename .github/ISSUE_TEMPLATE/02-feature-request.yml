@@ -60,34 +60,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: category
-    attributes:
-      label: Feature Category / 功能类别
-      description: Which area does this feature belong to? / 此功能属于哪个领域？
-      options:
-        - Chat Experience / 聊天体验
-        - Admin & Management / 管理和管理
-        - Authentication & Security / 身份验证和安全
-        - API & Integration / API和集成
-        - UI/UX Improvements / UI/UX改进
-        - Performance / 性能
-        - Internationalization / 国际化
-        - Mobile Experience / 移动体验
-        - Developer Experience / 开发者体验
-        - Other / 其他
-    validations:
-      required: true
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternative Solutions / 替代解决方案
-      description: Have you considered any alternative solutions or workarounds? / 您考虑过任何替代解决方案或变通方法吗？
-      placeholder: |
-        Describe any alternative solutions you've considered or current workarounds you're using.
-        描述您考虑过的任何替代解决方案或您正在使用的当前变通方法。
-
   - type: textarea
     id: additional_context
     attributes:

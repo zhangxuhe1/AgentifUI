@@ -74,37 +74,6 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: browser
-    attributes:
-      label: Browser / 浏览器
-      description: Which browser(s) are you experiencing this issue with? / 您在哪个浏览器中遇到此问题？
-      multiple: true
-      options:
-        - Chrome
-        - Firefox
-        - Safari
-        - Edge
-        - Mobile Safari (iOS)
-        - Mobile Chrome (Android)
-        - Other
-
-  - type: textarea
-    id: system_info
-    attributes:
-      label: System Information / 系统信息
-      description: Please provide relevant system details / 请提供相关系统详细信息
-      placeholder: |
-        - OS: (e.g., macOS 14.0, Windows 11, Ubuntu 22.04)
-        - Node.js version: (e.g., 22.15.0)
-        - Browser: (e.g., Chrome 120)
-        - Database: (e.g., Supabase hosted, local Supabase)
-      value: |
-        - OS: 
-        - Node.js version: 
-        - Browser: 
-        - Database: 
-
   - type: textarea
     id: expected_behavior
     attributes:
