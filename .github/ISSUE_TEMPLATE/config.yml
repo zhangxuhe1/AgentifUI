@@ -1,13 +1,1 @@
 blank_issues_enabled: false
-contact_links:
-  - name: 📖 Documentation / 文档
-    url: https://github.com/ifLabX/AgentifUI/tree/main/docs
-    about: Check our comprehensive documentation for setup guides, API references, and more / 查看我们的综合文档，包括设置指南、API参考等
-
-  - name: 💬 Discussions / 讨论
-    url: https://github.com/ifLabX/AgentifUI/discussions
-    about: Join community discussions, ask questions, and share ideas / 加入社区讨论，提问和分享想法
-
-  - name: 📚 Development Guide / 开发指南
-    url: https://github.com/ifLabX/AgentifUI/blob/main/CONTRIBUTING.md
-    about: Learn how to contribute to AgentifUI development / 了解如何为AgentifUI开发做出贡献 

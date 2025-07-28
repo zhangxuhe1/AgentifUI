@@ -48,13 +48,8 @@ body:
       label: Proposed Solution / 建议解决方案
       description: Describe your proposed solution in detail / 详细描述您的建议解决方案
       placeholder: |
-        **What should the feature do? / 功能应该做什么？**
-        
-
-        **How should it work? / 它应该如何工作？**
-        
-
-        **What should it look like? / 它应该是什么样子？**
+        Describe how it should work and what it should look like.
+        请说明该功能如何工作以及它应呈现的样子。
         
     validations:
       required: true
