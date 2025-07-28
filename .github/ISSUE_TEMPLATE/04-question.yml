@@ -1,8 +1,6 @@
 name: ❓ Question / Support / 问题/支持
 description: Ask a question or get help with using AgentifUI / 询问问题或获取使用AgentifUI的帮助
 title: "[QUESTION] "
-labels: ["question", "support"]
-assignees: []
 
 body:
   - type: markdown
@@ -15,12 +13,27 @@ body:
         **Before submitting, please check:**
         - [Documentation](https://github.com/ifLabX/AgentifUI/tree/main/docs)
         - [Existing Issues](https://github.com/ifLabX/AgentifUI/issues)
-        - [FAQ](https://github.com/ifLabX/AgentifUI#faq)
+        - [README](https://github.com/ifLabX/AgentifUI#readme)
         
         **在提交之前，请检查：**
         - [文档](https://github.com/ifLabX/AgentifUI/tree/main/docs)
         - [现有问题](https://github.com/ifLabX/AgentifUI/issues)
-        - [常见问题](https://github.com/ifLabX/AgentifUI#faq)
+        - [README](https://github.com/ifLabX/AgentifUI#readme)
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Self Checks / 自检清单
+      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      options:
+        - label: This is only for questions/support, if you found a bug, please use Bug Report template / 这仅用于问题/支持，如果您发现错误，请使用错误报告模板
+          required: true
+        - label: I have searched for existing issues and discussions / 我已搜索现有问题和讨论
+          required: true
+        - label: I have read the relevant documentation / 我已阅读相关文档
+          required: true
+        - label: I confirm that I am using English to submit this report / 我确认使用英文提交此报告
+          required: true
 
   - type: dropdown
     id: category
@@ -30,12 +43,11 @@ body:
       options:
         - Installation & Setup / 安装和设置
         - Configuration / 配置
-        - API Integration / API集成
+        - Dify API Integration / Dify API集成
         - Authentication / 身份验证
         - Database Setup / 数据库设置
         - Deployment / 部署
         - Performance / 性能
-        - Troubleshooting / 故障排除
         - Feature Usage / 功能使用
         - Development / 开发
         - Best Practices / 最佳实践
@@ -56,7 +68,7 @@ body:
     id: description
     attributes:
       label: Detailed Question / 详细问题
-      description: Provide a detailed description of your question or issue / 提供您问题的详细描述
+      description: Provide a detailed description of your question / 提供您问题的详细描述
       placeholder: |
         **What are you trying to accomplish? / 您想完成什么？**
         
@@ -70,108 +82,39 @@ body:
       required: true
 
   - type: textarea
-    id: context
+    id: environment
     attributes:
-      label: Context & Environment / 上下文和环境
-      description: Provide context about your setup and environment / 提供有关您的设置和环境的上下文
+      label: Environment Information / 环境信息
+      description: Provide context about your setup / 提供有关您的设置的信息
       placeholder: |
-        **Your Setup / 您的设置：**
-        - Operating System:
-        - Node.js version:
-        - Browser:
-        - AgentifUI version:
-        - Database:
-        - Deployment method:
-
-        **What you're building / 您正在构建什么：**
-        - Project type:
-        - Use case:
-        - Scale/Volume:
+        - AgentifUI version: (e.g., 0.1.0, main branch)
+        - Operating System: (e.g., macOS 14.0, Windows 11)
+        - Node.js version: (e.g., 22.15.0)
+        - Database: (e.g., Supabase hosted, local)
+        - Deployment method: (e.g., local dev, PM2, Docker)
       value: |
-        **Your Setup / 您的设置：**
-        - Operating System:
-        - Node.js version:
-        - Browser:
-        - AgentifUI version:
-        - Database:
-        - Deployment method:
-
-        **What you're building / 您正在构建什么：**
-        - Project type:
-        - Use case:
-        - Scale/Volume:
+        - AgentifUI version: 
+        - Operating System: 
+        - Node.js version: 
+        - Database: 
+        - Deployment method: 
 
   - type: textarea
-    id: attempted_solutions
+    id: logs_or_code
     attributes:
-      label: What I've Tried / 我尝试过的
-      description: What solutions have you already attempted? / 您已经尝试过什么解决方案？
-      placeholder: |
-        List the steps you've taken to solve this problem:
-        1. 
-        2. 
-        3. 
-        
-        列出您为解决此问题所采取的步骤：
-        1. 
-        2. 
-        3. 
-
-  - type: textarea
-    id: code_snippets
-    attributes:
-      label: Relevant Code / 相关代码
-      description: Share any relevant code snippets, configuration files, or error messages / 分享任何相关的代码片段、配置文件或错误消息
+      label: Relevant Code or Logs / 相关代码或日志
+      description: Share any relevant code snippets, configuration, or error messages / 分享任何相关的代码片段、配置或错误消息
       placeholder: |
         Please paste any relevant code, configuration, or error messages here.
         请在此粘贴任何相关的代码、配置或错误消息。
       render: code
 
-  - type: dropdown
-    id: urgency
-    attributes:
-      label: Urgency / 紧急程度
-      description: How urgent is this question for you? / 这个问题对您有多紧急？
-      options:
-        - Blocking - Cannot proceed without answer / 阻塞 - 没有答案无法继续
-        - High - Needed soon for project / 高 - 项目很快需要
-        - Medium - Would help with planning / 中等 - 有助于规划
-        - Low - General curiosity / 低 - 一般好奇
-
   - type: textarea
-    id: expected_outcome
+    id: additional_context
     attributes:
-      label: Expected Outcome / 期望结果
-      description: What outcome are you hoping for? / 您希望得到什么结果？
+      label: Additional Context / 其他信息
+      description: Any additional context that would be helpful / 任何有助于解决问题的其他信息
       placeholder: |
-        Describe what you expect to achieve or what kind of answer would be helpful.
-        描述您期望实现什么或什么样的答案会有帮助。
-
-  - type: checkboxes
-    id: resources
-    attributes:
-      label: I have checked / 我已检查
-      description: Please confirm you have checked these resources / 请确认您已检查这些资源
-      options:
-        - label: I have searched existing issues and discussions / 我已搜索现有问题和讨论
-        - label: I have read the relevant documentation / 我已阅读相关文档
-        - label: I have tried basic troubleshooting steps / 我已尝试基本故障排除步骤
-
-  - type: checkboxes
-    id: contribution
-    attributes:
-      label: Contribution / 贡献
-      description: After getting help, would you be willing to contribute back? / 获得帮助后，您愿意回馈贡献吗？
-      options:
-        - label: I can help improve documentation based on the answer / 我可以根据答案帮助改进文档
-        - label: I can help answer similar questions from other users / 我可以帮助回答其他用户的类似问题
-        - label: I can contribute code improvements if relevant / 如果相关，我可以贡献代码改进
-
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct / 行为准则
-      description: By submitting this question, you agree to follow our Code of Conduct / 通过提交此问题，您同意遵守我们的行为准则
-      options:
-        - label: I agree to follow this project's Code of Conduct / 我同意遵守此项目的行为准则
-          required: true 
+        - Screenshots or videos
+        - Related issues or discussions
+        - What outcome are you hoping for? 

@@ -1,8 +1,6 @@
 name: 🔒 Security Issue / 安全问题
 description: Report a security vulnerability (Use privately for sensitive issues) / 报告安全漏洞（敏感问题请私下使用）
 title: "[SECURITY] "
-labels: ["security", "needs-triage"]
-assignees: []
 
 body:
   - type: markdown
@@ -34,6 +32,8 @@ body:
           required: true
         - label: This is not a sensitive security vulnerability / 这不是敏感的安全漏洞
           required: true
+        - label: I confirm that I am using English to submit this report / 我确认使用英文提交此报告
+          required: true
 
   - type: dropdown
     id: type
@@ -47,8 +47,8 @@ body:
         - Authentication / 身份验证
         - Authorization / 授权
         - Input Validation / 输入验证
-        - Security Headers / 安全头
-        - HTTPS/TLS / HTTPS/TLS
+        - API Security / API安全
+        - Database Security / 数据库安全
         - Dependency Security / 依赖安全
         - Security Documentation / 安全文档
         - Security Best Practices / 安全最佳实践
@@ -61,7 +61,7 @@ body:
     attributes:
       label: Security Issue Summary / 安全问题摘要
       description: Briefly describe the security concern / 简要描述安全问题
-      placeholder: "e.g., Missing Content Security Policy headers / 缺少内容安全策略头"
+      placeholder: "e.g., Missing authentication check in API endpoint / API端点缺少身份验证检查"
     validations:
       required: true
 
@@ -99,7 +99,7 @@ body:
     id: affected_components
     attributes:
       label: Affected Components / 受影响的组件
-      description: Which parts of the system are affected? / 系统的哪些部分受到影响？
+      description: Which parts of AgentifUI are affected? / AgentifUI的哪些部分受到影响？
       placeholder: |
         List the affected components, files, or features:
         列出受影响的组件、文件或功能：
@@ -146,30 +146,17 @@ body:
       label: Environment Details / 环境详细信息
       description: Provide relevant environment information / 提供相关环境信息
       placeholder: |
-        - AgentifUI version:
-        - Operating System:
-        - Browser (if applicable):
-        - Database:
-        - Deployment method:
-        - Network configuration:
+        - AgentifUI version: (e.g., 0.1.0, main branch)
+        - Operating System: (e.g., macOS 14.0, Windows 11)
+        - Database: (e.g., Supabase hosted, local)
+        - Deployment method: (e.g., local dev, PM2, Docker)
+        - Network configuration: (if relevant)
       value: |
         - AgentifUI version:
         - Operating System:
-        - Browser (if applicable):
         - Database:
         - Deployment method:
         - Network configuration:
-
-  - type: textarea
-    id: additional_context
-    attributes:
-      label: Additional Context / 其他信息
-      description: Any additional context about this security issue / 关于此安全问题的任何其他信息
-      placeholder: |
-        - Related security standards or compliance requirements
-        - Similar issues in other projects
-        - Research or documentation references
-        - Screenshots (if safe to share)
 
   - type: checkboxes
     id: responsible_disclosure
@@ -180,13 +167,4 @@ body:
         - label: I will not publicly disclose this issue until it has been addressed / 在问题得到解决之前，我不会公开披露此问题
           required: true
         - label: I understand that security issues require careful handling / 我了解安全问题需要谨慎处理
-          required: true
-
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct / 行为准则
-      description: By submitting this security issue, you agree to follow our Code of Conduct / 通过提交此安全问题，您同意遵守我们的行为准则
-      options:
-        - label: I agree to follow this project's Code of Conduct / 我同意遵守此项目的行为准则
           required: true 

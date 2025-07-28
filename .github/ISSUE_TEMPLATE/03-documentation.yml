@@ -1,8 +1,6 @@
 name: 📚 Documentation / 文档
 description: Report issues with documentation or suggest improvements / 报告文档问题或建议改进
 title: "[DOCS] "
-labels: ["documentation", "needs-review"]
-assignees: []
 
 body:
   - type: markdown
@@ -11,6 +9,19 @@ body:
         Thank you for helping improve our documentation! Clear documentation is essential for project success.
         
         感谢您帮助改进我们的文档！清晰的文档对项目成功至关重要。
+
+  - type: checkboxes
+    id: prerequisites
+    attributes:
+      label: Self Checks / 自检清单
+      description: Please confirm you have completed the following steps / 请确认您已完成以下步骤
+      options:
+        - label: I have searched for existing issues / 我已搜索现有问题
+          required: true
+        - label: I confirm that I am using English to submit this report / 我确认使用英文提交此报告
+          required: true
+        - label: Please do not modify this template and fill in all the required fields / 请不要修改此模板并填写所有必填字段
+          required: true
 
   - type: dropdown
     id: type
@@ -26,8 +37,8 @@ body:
         - Formatting issue / 格式问题
         - New documentation needed / 需要新文档
         - API documentation / API文档
-        - User guide / 用户指南
-        - Developer guide / 开发者指南
+        - Setup guide / 设置指南
+        - Other / 其他
     validations:
       required: true
 
@@ -36,7 +47,7 @@ body:
     attributes:
       label: Documentation Location / 文档位置
       description: Where is the documentation located? / 文档位于哪里？
-      placeholder: "e.g., README.md, docs/setup.md, API documentation section, etc."
+      placeholder: "e.g., README.md, docs/SETUP-REQUIREMENTS.md, specific section, etc."
     validations:
       required: true
 
@@ -76,53 +87,21 @@ body:
         - Developers / 开发者
         - Administrators / 管理员
         - Contributors / 贡献者
-        - API consumers / API使用者
         - New users / 新用户
         - Advanced users / 高级用户
     validations:
       required: true
 
-  - type: dropdown
-    id: priority
-    attributes:
-      label: Priority / 优先级
-      description: How important is this documentation update? / 此文档更新有多重要？
-      options:
-        - Critical - Prevents users from completing tasks / 严重 - 阻止用户完成任务
-        - High - Causes significant confusion / 高 - 造成严重混乱
-        - Medium - Minor improvements needed / 中等 - 需要小改进
-        - Low - Nice to have / 低 - 有会很好
-    validations:
-      required: true
-
-  - type: checkboxes
-    id: languages
-    attributes:
-      label: Languages Affected / 受影响的语言
-      description: Which languages are affected by this documentation issue? / 哪些语言受此文档问题影响？
-      options:
-        - label: English / 英语
-        - label: Chinese (Simplified) / 中文（简体）
-        - label: Chinese (Traditional) / 中文（繁体）
-        - label: Japanese / 日语
-        - label: Korean / 韩语
-        - label: Spanish / 西班牙语
-        - label: French / 法语
-        - label: German / 德语
-        - label: Russian / 俄语
-        - label: Portuguese / 葡萄牙语
-        - label: Italian / 意大利语
-
   - type: textarea
-    id: context
+    id: additional_context
     attributes:
       label: Additional Context / 其他信息
       description: Any additional context that would help improve the documentation / 任何有助于改进文档的其他信息
       placeholder: |
         - Related issues or discussions
         - Screenshots of confusing sections
-        - Links to similar documentation in other projects
         - User feedback or questions you've received
+        - Links to similar documentation in other projects
 
   - type: checkboxes
     id: contribution
@@ -132,15 +111,5 @@ body:
       options:
         - label: I can write the content / 我可以写内容
         - label: I can review the content / 我可以审查内容
-        - label: I can translate the content / 我可以翻译内容
         - label: I can provide technical review / 我可以提供技术审查
-        - label: I can test the instructions / 我可以测试说明
-
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct / 行为准则
-      description: By submitting this documentation issue, you agree to follow our Code of Conduct / 通过提交此文档问题，您同意遵守我们的行为准则
-      options:
-        - label: I agree to follow this project's Code of Conduct / 我同意遵守此项目的行为准则
-          required: true 
+        - label: I can test the instructions / 我可以测试说明 
