@@ -1,6 +1,5 @@
 name: 🐛 Bug Report / 错误报告
 description: Report a bug to help us improve AgentifUI / 报告错误帮助我们改进AgentifUI
-title: "[BUG] "
 
 body:
   - type: markdown
