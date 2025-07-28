@@ -62,8 +62,8 @@ body:
         Attach any mockups, sketches, or reference images that help illustrate your idea.
         附加任何模型图、草图或参考图像来帮助说明您的想法。
       placeholder: |
-        You can attach images by clicking this area to highlight it and then dragging files in.
-        您可以通过点击此区域突出显示，然后拖入文件来附加图像。
+        Add any other context about the problem here...
+        在此添加有关问题的任何其他上下文...
 
   - type: checkboxes
     id: contribution
